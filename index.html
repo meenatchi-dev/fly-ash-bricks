@@ -55,7 +55,7 @@
   }
   </script>
 </head>
-<body>
+<body class="home-page">
 
   <!-- Sticky Navbar -->
   <header class="navbar">
@@ -75,14 +75,7 @@
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="nav-ctas">
-        <a href="tel:+919840012345" class="btn btn-outline btn-sm">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call Us
-        </a>
-        <a href="contact.html" class="btn btn-primary btn-sm">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>Get Quote
-        </a>
-      </div>
+
       <button class="menu-toggle" aria-label="Toggle Menu">
         <span></span>
         <span></span>
@@ -93,18 +86,22 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&q=80&w=1920" alt="Modern automated fly ash brick manufacturing facility yard" loading="eager">
+    <!-- Faded machine background on the right side -->
+    <div class="hero-right-bg">
+      <img src="images/machine.jpg" alt="Manufacturing Facility Background" loading="lazy">
     </div>
     <div class="container">
       <div class="hero-content reveal-left">
         <span class="hero-tag">Green Construction Technology</span>
         <h1 class="hero-title">High-Quality Fly Ash Bricks for Strong &amp; Sustainable Construction</h1>
-        <p class="hero-desc">Built for load-bearing strength and certified durability. Our eco-friendly fly ash bricks offer superior heat insulation, uniform dimensions, and cost savings up to 20% on mortar.</p>
+        <p class="hero-desc" style="color: var(--text-muted-dark);">Built for load-bearing strength and certified durability. Our eco-friendly fly ash bricks offer superior heat insulation, uniform dimensions, and cost savings up to 20% on mortar.</p>
         <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary">Get Quote</a>
-          <a href="products.html" class="btn btn-outline">View Products</a>
+          <a href="contact.html" class="btn btn-primary"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>Get Quote</a>
+          <a href="products.html" class="btn btn-secondary"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M19 4H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-9 14H5v-5h5v5zm0-7H5V6h5v5zm9 7h-7v-5h7v5zm0-7h-7V6h7v5z"/></svg>View Products</a>
         </div>
+      </div>
+      <div class="hero-image reveal-right">
+        <img src="images/white_flyash_bricks.png" alt="High Quality White Fly Ash Bricks" loading="eager" width="600" height="450">
       </div>
     </div>
   </section>

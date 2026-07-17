@@ -246,14 +246,14 @@ button, input, textarea, select {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--primary);
+  background-color: var(--accent);
   transition: var(--transition-fast);
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   opacity: 1;
-  color: var(--primary);
+  color: #ffffff;
 }
 
 .nav-links a:hover::after,
@@ -1738,6 +1738,38 @@ button, input, textarea, select {
   transform: scale(1.1) rotate(10deg);
 }
 
+.float-phone {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+.float-phone:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.1) rotate(15deg);
+}
+
+.float-phone svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.float-quote {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+
+.float-quote:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.1) rotate(-15deg);
+}
+
+.float-quote svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
 .float-whatsapp svg {
   width: 30px;
   height: 30px;
@@ -1945,4 +1977,75 @@ button, input, textarea, select {
 }
 .navbar.scrolled .menu-toggle span {
   background-color: var(--primary) !important;
+}
+
+/* Hero Image right-hand layout styles */
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-slow);
+}
+
+.hero-image:hover img {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Homepage Transparent Header Link Colors (sits on white background on load) */
+body.home-page .navbar:not(.scrolled) .nav-links a {
+  color: var(--text-dark) !important;
+  opacity: 0.85;
+}
+body.home-page .navbar:not(.scrolled) .nav-links a:hover,
+body.home-page .navbar:not(.scrolled) .nav-links a.active {
+  color: var(--primary) !important;
+  opacity: 1;
+}
+body.home-page .navbar:not(.scrolled) .logo {
+  color: var(--primary) !important;
+}
+body.home-page .navbar:not(.scrolled) .logo-orange {
+  color: var(--primary) !important;
+}
+body.home-page .navbar:not(.scrolled) .menu-toggle span {
+  background-color: var(--primary) !important;
+}
+
+/* Hero secondary faded background styling */
+.hero-right-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0.15; /* Subtly faded watermark */
+  pointer-events: none;
+}
+
+.hero-right-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 80%, #ffffff 100%),
+              linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, #ffffff 100%);
+}
+
+.hero-right-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
