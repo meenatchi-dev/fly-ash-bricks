@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://meenakshiflyashbricks.com/sitemap.xml
+Sitemap: https://meenatchi-dev.github.io/fly-ash-bricks/sitemap.xml
