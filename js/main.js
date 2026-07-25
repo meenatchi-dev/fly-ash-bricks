@@ -74,10 +74,11 @@
     }
   };
 
-  // Run navbar handlers on DOM load
-  window.initNavbarHandlers();
+  document.addEventListener('DOMContentLoaded', () => {
+    // Run navbar handlers on DOM load
+    window.initNavbarHandlers();
 
-  // --- 3. Scroll Reveal Animations (IntersectionObserver) ---
+    // --- 3. Scroll Reveal Animations (IntersectionObserver) ---
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
   
   if ('IntersectionObserver' in window) {
