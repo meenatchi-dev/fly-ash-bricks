@@ -20,6 +20,7 @@
   <meta name="twitter:image" content="https://meenatchi-dev.github.io/fly-ash-bricks/images/logo.jpg">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
+  <script src="js/i18n.js" defer></script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="images/logo.jpg">
@@ -85,18 +86,30 @@
     <div class="container">
       <a href="index.html" class="logo">
         <img src="images/logo.jpg" alt="Meenakshi Fly Ash Bricks Logo" class="brand-logo-img">
-        <span>Meenakshi <span class="logo-orange">Fly Ash Bricks</span></span>
+        <span><span data-i18n="nav.brand_name">Meenakshi</span> <span class="logo-orange" data-i18n="nav.brand_suffix">Fly Ash Bricks</span></span>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="process.html">Process</a></li>
-        <li><a href="quality.html">Quality</a></li>
-        <li><a href="industries.html">Industries</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+        <li><a href="process.html" data-i18n="nav.process">Process</a></li>
+        <li><a href="quality.html" data-i18n="nav.quality">Quality</a></li>
+        <li><a href="industries.html" data-i18n="nav.industries">Industries</a></li>
+        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li class="lang-selector-li">
+          <div class="lang-selector">
+            <select class="lang-select" aria-label="Select Language">
+              <option value="en">English</option>
+              <option value="ta">தமிழ்</option>
+              <option value="hi">हिंदी</option>
+              <option value="ml">മലയാളം</option>
+              <option value="te">తెలుగు</option>
+              <option value="kn">ಕನ್ನಡ</option>
+            </select>
+          </div>
+        </li>
       </ul>
 
       <button class="menu-toggle" aria-label="Toggle Menu">
@@ -117,10 +130,10 @@
     </div>
     <div class="container">
       <div class="hero-content reveal-left">
-        <span class="hero-tag">Green Construction Technology</span>
-        <h1 class="hero-title" style="color: var(--primary);">High-Quality Fly Ash Bricks for Strong &amp; Sustainable
+        <span class="hero-tag" data-i18n="hero.tag">Green Construction Technology</span>
+        <h1 class="hero-title" style="color: var(--primary);" data-i18n="hero.title">High-Quality Fly Ash Bricks for Strong &amp; Sustainable
           Construction</h1>
-        <p class="hero-desc" style="color: var(--text-muted-dark);">Built for load-bearing strength and certified
+        <p class="hero-desc" style="color: var(--text-muted-dark);" data-i18n="hero.desc">Built for load-bearing strength and certified
           durability. Our eco-friendly fly ash bricks offer superior heat insulation, uniform dimensions, and cost
           savings up to 20% on mortar.</p>
         <div class="hero-actions">
@@ -128,12 +141,12 @@
               fill="currentColor" style="margin-right: 6px; display: inline-block; vertical-align: middle;">
               <path
                 d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z" />
-            </svg>Get Quote</a>
+            </svg><span data-i18n="hero.get_quote">Get Quote</span></a>
           <a href="products.html" class="btn btn-secondary"><svg viewBox="0 0 24 24" width="14" height="14"
               fill="currentColor" style="margin-right: 6px; display: inline-block; vertical-align: middle;">
               <path
                 d="M19 4H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-9 14H5v-5h5v5zm0-7H5V6h5v5zm9 7h-7v-5h7v5zm0-7h-7V6h7v5z" />
-            </svg>View Products</a>
+            </svg><span data-i18n="hero.view_products">View Products</span></a>
         </div>
       </div>
       <div class="hero-image reveal-right">
@@ -148,19 +161,19 @@
       <div class="stats-grid">
         <div class="stat-item">
           <div class="stat-number" data-target="15" data-suffix="+" style="color: #45a049;">0</div>
-          <div class="stat-label" style="color: #66bb6a;">Years of Excellence</div>
+          <div class="stat-label" style="color: #66bb6a;" data-i18n="stats.years">Years of Excellence</div>
         </div>
         <div class="stat-item">
           <div class="stat-number" data-target="10000" data-suffix="+" style="color: #45a049;">0</div>
-          <div class="stat-label" style="color: #66bb6a;">Daily Production Capacity</div>
+          <div class="stat-label" style="color: #66bb6a;" data-i18n="stats.daily_capacity">Daily Production Capacity</div>
         </div>
         <div class="stat-item">
           <div class="stat-number" data-target="10" data-suffix="+" style="color: #45a049;">0</div>
-          <div class="stat-label" style="color: #66bb6a;">Satisfied Clients</div>
+          <div class="stat-label" style="color: #66bb6a;" data-i18n="stats.satisfied_clients">Satisfied Clients</div>
         </div>
         <div class="stat-item">
           <div class="stat-number" data-target="10" data-suffix="+" style="color: #45a049;">0</div>
-          <div class="stat-label" style="color: #66bb6a;">Projects Completed</div>
+          <div class="stat-label" style="color: #66bb6a;" data-i18n="stats.projects_completed">Projects Completed</div>
         </div>
       </div>
     </div>
@@ -177,14 +190,14 @@
           </div>
           <div class="about-badge">
             <span class="years">15+</span>
-            <span class="text">Years Experience</span>
+            <span class="text" data-i18n="about.years_exp">Years Experience</span>
           </div>
         </div>
         <div class="about-content reveal-right">
-          <span class="section-subtitle">Who We Are</span>
-          <h2 class="section-title" style="font-size: 36px; margin-bottom: 20px;">Redefining Industrial Brick
+          <span class="section-subtitle" data-i18n="about.subtitle">Who We Are</span>
+          <h2 class="section-title" style="font-size: 36px; margin-bottom: 20px;" data-i18n="about.title">Redefining Industrial Brick
             Manufacturing Standards</h2>
-          <p class="about-text">At Meenakshi Flyash Bricks, we manufacture premium fly ash bricks using automated
+          <p class="about-text" data-i18n="about.text">At Meenakshi Flyash Bricks, we manufacture premium fly ash bricks using automated
             hydraulic press systems. Our mission is to produce building materials that exceed Indian Standards (IS
             12894) while preserving nature by recycling fly ash.</p>
           <ul class="features-list">
@@ -192,28 +205,28 @@
               <svg viewBox="0 0 24 24">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
               </svg>
-              <span>100% Eco-Friendly Materials</span>
+              <span data-i18n="about.feature_1">100% Eco-Friendly Materials</span>
             </li>
             <li class="feature-list-item">
               <svg viewBox="0 0 24 24">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
               </svg>
-              <span>Higher Compressive Strength</span>
+              <span data-i18n="about.feature_2">Higher Compressive Strength</span>
             </li>
             <li class="feature-list-item">
               <svg viewBox="0 0 24 24">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
               </svg>
-              <span>Exceptional Fire Resistance</span>
+              <span data-i18n="about.feature_3">Exceptional Fire Resistance</span>
             </li>
             <li class="feature-list-item">
               <svg viewBox="0 0 24 24">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
               </svg>
-              <span>Low Water Absorption</span>
+              <span data-i18n="about.feature_4">Low Water Absorption</span>
             </li>
           </ul>
-          <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
+          <a href="about.html" class="btn btn-secondary" data-i18n="about.learn_more">Learn More About Us</a>
         </div>
       </div>
     </div>
@@ -223,9 +236,9 @@
   <section class="section">
     <div class="container">
       <div class="section-title-wrapper text-center reveal">
-        <span class="section-subtitle">Our Offerings</span>
-        <h2 class="section-title">Engineered For Heavy Load Structures</h2>
-        <p class="section-desc">From standard walls to load-bearing columns and eco-friendly paving, explore our
+        <span class="section-subtitle" data-i18n="products.subtitle">Our Offerings</span>
+        <h2 class="section-title" data-i18n="products.title">Engineered For Heavy Load Structures</h2>
+        <p class="section-desc" data-i18n="products.desc">From standard walls to load-bearing columns and eco-friendly paving, explore our
           heavy-duty product lineup.</p>
       </div>
 
@@ -237,20 +250,20 @@
               alt="Standard fly ash bricks mockup in building wall">
           </div>
           <div class="product-info">
-            <h3 class="product-title">Standard Fly Ash Bricks</h3>
-            <p class="product-desc">Designed for internal partitions, external load-bearing masonry walls, and framed
+            <h3 class="product-title" data-i18n="products.p1_title">Standard Fly Ash Bricks</h3>
+            <p class="product-desc" data-i18n="products.p1_desc">Designed for internal partitions, external load-bearing masonry walls, and framed
               structures.</p>
             <div class="product-specs">
-              <div class="spec-line"><span class="spec-name">Size</span><span class="spec-val">230 x 110 x 75 mm</span>
+              <div class="spec-line"><span class="spec-name" data-i18n="products.spec_size">Size</span><span class="spec-val">230 x 110 x 75 mm</span>
               </div>
-              <div class="spec-line"><span class="spec-name">Weight</span><span class="spec-val">3.2 kg approx</span>
+              <div class="spec-line"><span class="spec-name" data-i18n="products.spec_weight">Weight</span><span class="spec-val" data-i18n="products.p1_weight">3.2 kg approx</span>
               </div>
-              <div class="spec-line"><span class="spec-name">Strength</span><span class="spec-val">&gt; 10 N/mm²</span>
+              <div class="spec-line"><span class="spec-name" data-i18n="products.spec_strength">Strength</span><span class="spec-val">&gt; 10 N/mm²</span>
               </div>
             </div>
             <div class="product-actions">
-              <a href="products.html" class="btn btn-secondary btn-sm">Technical Specs</a>
-              <button class="btn btn-primary btn-sm download-spec-btn" data-product="Standard-Fly-Ash-Bricks">Download
+              <a href="products.html" class="btn btn-secondary btn-sm" data-i18n="products.tech_specs">Technical Specs</a>
+              <button class="btn btn-primary btn-sm download-spec-btn" data-product="Standard-Fly-Ash-Bricks" data-i18n="products.download_pdf">Download
                 PDF</button>
             </div>
           </div>
@@ -263,20 +276,20 @@
               alt="Premium interlocking blocks ready for installation">
           </div>
           <div class="product-info">
-            <h3 class="product-title">Interlocking Fly Ash Blocks</h3>
-            <p class="product-desc">High precision tongue-and-groove brick layout that speeds up building time and
+            <h3 class="product-title" data-i18n="products.p2_title">Interlocking Fly Ash Blocks</h3>
+            <p class="product-desc" data-i18n="products.p2_desc">High precision tongue-and-groove brick layout that speeds up building time and
               eliminates mortar needs.</p>
             <div class="product-specs">
-              <div class="spec-line"><span class="spec-name">Size</span><span class="spec-val">300 x 150 x 150 mm</span>
+              <div class="spec-line"><span class="spec-name" data-i18n="products.spec_size">Size</span><span class="spec-val">300 x 150 x 150 mm</span>
               </div>
-              <div class="spec-line"><span class="spec-name">Weight</span><span class="spec-val">9.5 kg approx</span>
+              <div class="spec-line"><span class="spec-name" data-i18n="products.spec_weight">Weight</span><span class="spec-val" data-i18n="products.p2_weight">9.5 kg approx</span>
               </div>
-              <div class="spec-line"><span class="spec-name">Strength</span><span class="spec-val">&gt; 12.5
+              <div class="spec-line"><span class="spec-name" data-i18n="products.spec_strength">Strength</span><span class="spec-val">&gt; 12.5
                   N/mm²</span></div>
             </div>
             <div class="product-actions">
-              <a href="products.html" class="btn btn-secondary btn-sm">Technical Specs</a>
-              <button class="btn btn-primary btn-sm download-spec-btn" data-product="Interlocking-Blocks">Download
+              <a href="products.html" class="btn btn-secondary btn-sm" data-i18n="products.tech_specs">Technical Specs</a>
+              <button class="btn btn-primary btn-sm download-spec-btn" data-product="Interlocking-Blocks" data-i18n="products.download_pdf">Download
                 PDF</button>
             </div>
           </div>
@@ -289,20 +302,20 @@
               alt="Paver blocks laid out beautifully in villa driveway">
           </div>
           <div class="product-info">
-            <h3 class="product-title">Heavy Duty Paver Blocks</h3>
-            <p class="product-desc">Ideal for high-traffic environments, factory floors, shipping yards, pathways, and
+            <h3 class="product-title" data-i18n="products.p3_title">Heavy Duty Paver Blocks</h3>
+            <p class="product-desc" data-i18n="products.p3_desc">Ideal for high-traffic environments, factory floors, shipping yards, pathways, and
               villa driveways.</p>
             <div class="product-specs">
-              <div class="spec-line"><span class="spec-name">Size</span><span class="spec-val">200 x 100 x 80 mm</span>
+              <div class="spec-line"><span class="spec-name" data-i18n="products.spec_size">Size</span><span class="spec-val">200 x 100 x 80 mm</span>
               </div>
-              <div class="spec-line"><span class="spec-name">Weight</span><span class="spec-val">3.6 kg approx</span>
+              <div class="spec-line"><span class="spec-name" data-i18n="products.spec_weight">Weight</span><span class="spec-val" data-i18n="products.p3_weight">3.6 kg approx</span>
               </div>
-              <div class="spec-line"><span class="spec-name">Strength</span><span class="spec-val">&gt; 40 N/mm²</span>
+              <div class="spec-line"><span class="spec-name" data-i18n="products.spec_strength">Strength</span><span class="spec-val">&gt; 40 N/mm²</span>
               </div>
             </div>
             <div class="product-actions">
-              <a href="products.html" class="btn btn-secondary btn-sm">Technical Specs</a>
-              <button class="btn btn-primary btn-sm download-spec-btn" data-product="Heavy-Duty-Pavers">Download
+              <a href="products.html" class="btn btn-secondary btn-sm" data-i18n="products.tech_specs">Technical Specs</a>
+              <button class="btn btn-primary btn-sm download-spec-btn" data-product="Heavy-Duty-Pavers" data-i18n="products.download_pdf">Download
                 PDF</button>
             </div>
           </div>
@@ -314,12 +327,12 @@
   <!-- CTA Banner Section -->
   <section class="cta-banner">
     <div class="container reveal">
-      <h2>Build Stronger. Save Cost. Go Green.</h2>
-      <p>Consult with our structural engineering team today to receive a detailed cost-comparison breakdown against
+      <h2 data-i18n="cta.title">Build Stronger. Save Cost. Go Green.</h2>
+      <p data-i18n="cta.desc">Consult with our structural engineering team today to receive a detailed cost-comparison breakdown against
         traditional red clay bricks.</p>
       <div class="cta-actions">
-        <a href="contact.html" class="btn btn-outline">Request Custom Quote</a>
-        <a href="tel:+919042407725" class="btn btn-primary">Speak to Expert</a>
+        <a href="contact.html" class="btn btn-outline" data-i18n="cta.request_quote">Request Custom Quote</a>
+        <a href="tel:+919042407725" class="btn btn-primary" data-i18n="cta.speak_expert">Speak to Expert</a>
       </div>
     </div>
   </section>
@@ -331,9 +344,9 @@
         <div class="footer-col footer-about">
           <a href="index.html" class="logo">
             <img src="images/logo.jpg" alt="Meenakshi Fly Ash Bricks Logo" class="brand-logo-img">
-            <span>Meenakshi <span class="logo-orange">Fly Ash Bricks</span></span>
+            <span><span data-i18n="nav.brand_name">Meenakshi</span> <span class="logo-orange" data-i18n="nav.brand_suffix">Fly Ash Bricks</span></span>
           </a>
-          <p>Eco-friendly fly ash bricks engineered for maximum compressive strength, heat resistance, and
+          <p data-i18n="footer.about_text">Eco-friendly fly ash bricks engineered for maximum compressive strength, heat resistance, and
             sustainability. Supporting green infrastructure globally.</p>
           <div class="social-links">
             <a href="#" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24">
@@ -351,35 +364,35 @@
           </div>
         </div>
         <div class="footer-col">
-          <h3>Quick Links</h3>
+          <h3 data-i18n="footer.quick_links">Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="process.html">Manufacturing Process</a></li>
-            <li><a href="quality.html">Quality Standards</a></li>
-            <li><a href="industries.html">Industries Served</a></li>
-            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="process.html" data-i18n="footer.manufacturing_process">Manufacturing Process</a></li>
+            <li><a href="quality.html" data-i18n="footer.quality_standards">Quality Standards</a></li>
+            <li><a href="industries.html" data-i18n="footer.industries_served">Industries Served</a></li>
+            <li><a href="gallery.html" data-i18n="footer.photo_gallery">Photo Gallery</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Our Products</h3>
+          <h3 data-i18n="footer.our_products">Our Products</h3>
           <ul class="footer-links">
-            <li><a href="products.html">Standard Fly Ash Bricks</a></li>
-            <li><a href="products.html">Heavy Duty Paver Blocks</a></li>
-            <li><a href="products.html">Interlocking Wall Blocks</a></li>
-            <li><a href="products.html">Hollow Concrete Blocks</a></li>
-            <li><a href="products.html">Eco-Solid Bricks</a></li>
+            <li><a href="products.html" data-i18n="footer.standard_fly_ash">Standard Fly Ash Bricks</a></li>
+            <li><a href="products.html" data-i18n="footer.heavy_duty_pavers">Heavy Duty Paver Blocks</a></li>
+            <li><a href="products.html" data-i18n="footer.interlocking_blocks">Interlocking Wall Blocks</a></li>
+            <li><a href="products.html" data-i18n="footer.hollow_blocks">Hollow Concrete Blocks</a></li>
+            <li><a href="products.html" data-i18n="footer.eco_solid_bricks">Eco-Solid Bricks</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Contact Info</h3>
+          <h3 data-i18n="footer.contact_info">Contact Info</h3>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24">
               <path
                 d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
             </svg>
-            <span>370, Ambai–Tenkasi Main Road, Keela Ambur, Tenkasi, Tamil Nadu – 627418<br><small
-                style="opacity: 0.85;">(Near Meenakshi Agency Petrol Bunk - Indian Oil)</small></span>
+            <span><span data-i18n="footer.address">370, Ambai–Tenkasi Main Road, Keela Ambur, Tenkasi, Tamil Nadu – 627418</span><br><small
+                style="opacity: 0.85;" data-i18n="footer.address_sub">(Near Meenakshi Agency Petrol Bunk - Indian Oil)</small></span>
           </div>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24">
@@ -400,11 +413,11 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Meenakshi Flyash Bricks Manufacturing. All Rights Reserved.</p>
+        <p data-i18n="footer.copyright">&copy; 2026 Meenakshi Flyash Bricks Manufacturing. All Rights Reserved.</p>
         <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms &amp; Conditions</a>
-          <a href="sitemap.xml">Sitemap</a>
+          <a href="#" data-i18n="footer.privacy_policy">Privacy Policy</a>
+          <a href="#" data-i18n="footer.terms_conditions">Terms &amp; Conditions</a>
+          <a href="sitemap.xml" data-i18n="footer.sitemap">Sitemap</a>
         </div>
       </div>
     </div>

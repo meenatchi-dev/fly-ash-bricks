@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "brand_name": "Meenakshi",
+    "brand_suffix": "Fly Ash Bricks",
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "process": "Process",
+    "quality": "Quality",
+    "industries": "Industries",
+    "gallery": "Gallery",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tag": "Green Construction Technology",
+    "title": "High-Quality Fly Ash Bricks for Strong & Sustainable Construction",
+    "desc": "Built for load-bearing strength and certified durability. Our eco-friendly fly ash bricks offer superior heat insulation, uniform dimensions, and cost savings up to 20% on mortar.",
+    "get_quote": "Get Quote",
+    "view_products": "View Products"
+  },
+  "stats": {
+    "years": "Years of Excellence",
+    "daily_capacity": "Daily Production Capacity",
+    "satisfied_clients": "Satisfied Clients",
+    "projects_completed": "Projects Completed"
+  },
+  "about": {
+    "years_exp": "Years Experience",
+    "subtitle": "Who We Are",
+    "title": "Redefining Industrial Brick Manufacturing Standards",
+    "text": "At Meenakshi Flyash Bricks, we manufacture premium fly ash bricks using automated hydraulic press systems. Our mission is to produce building materials that exceed Indian Standards (IS 12894) while preserving nature by recycling fly ash.",
+    "feature_1": "100% Eco-Friendly Materials",
+    "feature_2": "Higher Compressive Strength",
+    "feature_3": "Exceptional Fire Resistance",
+    "feature_4": "Low Water Absorption",
+    "learn_more": "Learn More About Us"
+  },
+  "products": {
+    "subtitle": "Our Offerings",
+    "title": "Engineered For Heavy Load Structures",
+    "desc": "From standard walls to load-bearing columns and eco-friendly paving, explore our heavy-duty product lineup.",
+    "tech_specs": "Technical Specs",
+    "download_pdf": "Download PDF",
+    "spec_size": "Size",
+    "spec_weight": "Weight",
+    "spec_strength": "Strength",
+    "p1_title": "Standard Fly Ash Bricks",
+    "p1_desc": "Designed for internal partitions, external load-bearing masonry walls, and framed structures.",
+    "p1_weight": "3.2 kg approx",
+    "p2_title": "Interlocking Fly Ash Blocks",
+    "p2_desc": "High precision tongue-and-groove brick layout that speeds up building time and eliminates mortar needs.",
+    "p2_weight": "9.5 kg approx",
+    "p3_title": "Heavy Duty Paver Blocks",
+    "p3_desc": "Ideal for high-traffic environments, factory floors, shipping yards, pathways, and villa driveways.",
+    "p3_weight": "3.6 kg approx"
+  },
+  "cta": {
+    "title": "Build Stronger. Save Cost. Go Green.",
+    "desc": "Consult with our structural engineering team today to receive a detailed cost-comparison breakdown against traditional red clay bricks.",
+    "request_quote": "Request Custom Quote",
+    "speak_expert": "Speak to Expert"
+  },
+  "footer": {
+    "about_text": "Eco-friendly fly ash bricks engineered for maximum compressive strength, heat resistance, and sustainability. Supporting green infrastructure globally.",
+    "quick_links": "Quick Links",
+    "our_products": "Our Products",
+    "contact_info": "Contact Info",
+    "manufacturing_process": "Manufacturing Process",
+    "quality_standards": "Quality Standards",
+    "industries_served": "Industries Served",
+    "photo_gallery": "Photo Gallery",
+    "standard_fly_ash": "Standard Fly Ash Bricks",
+    "heavy_duty_pavers": "Heavy Duty Paver Blocks",
+    "interlocking_blocks": "Interlocking Wall Blocks",
+    "hollow_blocks": "Hollow Concrete Blocks",
+    "eco_solid_bricks": "Eco-Solid Bricks",
+    "address": "370, Ambai–Tenkasi Main Road, Keela Ambur, Tenkasi, Tamil Nadu – 627418",
+    "address_sub": "(Near Meenakshi Agency Petrol Bunk - Indian Oil)",
+    "copyright": "© 2026 Meenakshi Flyash Bricks Manufacturing. All Rights Reserved.",
+    "privacy_policy": "Privacy Policy",
+    "terms_conditions": "Terms & Conditions",
+    "sitemap": "Sitemap"
+  }
+}
