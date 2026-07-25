@@ -38,18 +38,33 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- 2. Mobile Menu Toggle ---
   const menuToggle = document.querySelector('.menu-toggle');
   const navList = document.querySelector('.nav-links');
+  const navOverlay = document.querySelector('.nav-overlay');
+
+  const closeMobileMenu = () => {
+    if (menuToggle) menuToggle.classList.remove('active');
+    if (navList) navList.classList.remove('active');
+    if (navOverlay) navOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  };
 
   if (menuToggle && navList) {
     menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navList.classList.toggle('active');
+      const isActive = menuToggle.classList.toggle('active');
+      navList.classList.toggle('active', isActive);
+      if (navOverlay) navOverlay.classList.toggle('active', isActive);
+      document.body.style.overflow = isActive ? 'hidden' : '';
     });
 
-    // Close mobile menu when clicking a link
+    if (navOverlay) {
+      navOverlay.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close mobile menu when clicking a link (excluding language dropdown)
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navList.classList.remove('active');
+      link.addEventListener('click', (e) => {
+        if (!link.closest('.lang-selector-li')) {
+          closeMobileMenu();
+        }
       });
     });
   }

@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  const SUPPORTED_LANGS = ['en', 'ta', 'hi', 'ml', 'te', 'kn'];
+  const SUPPORTED_LANGS = ['en', 'ta', 'hi', 'te', 'kn'];
   const DEFAULT_LANG = 'en';
   const STORAGE_KEY = 'preferred_language';
 
