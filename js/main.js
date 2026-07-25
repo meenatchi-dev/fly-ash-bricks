@@ -30,12 +30,18 @@
       handleScroll(); // Run once
     }
 
-    // Highlight current page link based on filename
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    // Highlight current page link based on exact clean filename
+    let rawPath = window.location.pathname.split('/').pop().split('#')[0].split('?')[0];
+    if (!rawPath || !rawPath.endsWith('.html')) {
+      rawPath = 'index.html';
+    }
+
     if (navLinks.length > 0) {
       navLinks.forEach(link => {
-        const linkPath = link.getAttribute('href');
-        if (linkPath === currentPath) {
+        const href = link.getAttribute('href');
+        if (!href) return;
+        const linkPath = href.split('#')[0].split('?')[0].split('/').pop();
+        if (linkPath === rawPath) {
           link.classList.add('active');
         } else {
           link.classList.remove('active');
@@ -77,6 +83,10 @@
   document.addEventListener('DOMContentLoaded', () => {
     // Run navbar handlers on DOM load
     window.initNavbarHandlers();
+
+    // Immediately activate hero & top header elements to prevent initial layout shift
+    const heroElements = document.querySelectorAll('.hero .reveal, .hero .reveal-left, .hero .reveal-right, .breadcrumbs .reveal, .breadcrumbs .reveal-left');
+    heroElements.forEach(el => el.classList.add('active'));
 
     // --- 3. Scroll Reveal Animations (IntersectionObserver) ---
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
