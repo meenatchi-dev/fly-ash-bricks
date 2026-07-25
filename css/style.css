@@ -2033,26 +2033,30 @@ button, input, textarea, select {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  .nav-links a {
+  /* Mobile Menu Item Golden Text Styling */
+  .navbar .nav-links a,
+  .navbar .nav-links a:link,
+  .navbar .nav-links a:visited {
     display: block;
     font-size: 18px;
     font-weight: 700;
-    color: var(--accent) !important; /* Bright golden color for mobile menu links */
-    padding: 14px 12px;
+    color: #e4b869 !important; /* Rich Golden color */
+    padding: 14px 14px;
     width: 100%;
     transition: var(--transition-fast);
   }
 
-  .nav-links a::after {
+  .navbar .nav-links a::after {
     display: none;
   }
 
-  .nav-links a:hover,
-  .nav-links a.active {
+  .navbar .nav-links a:hover,
+  .navbar .nav-links a.active {
     color: #ffffff !important;
-    padding-left: 20px;
-    background-color: rgba(200, 162, 97, 0.15);
-    border-radius: 6px;
+    background-color: rgba(228, 184, 105, 0.22) !important;
+    border-left: 4px solid #e4b869 !important;
+    padding-left: 18px;
+    border-radius: 4px;
   }
 
   .lang-selector-li {
