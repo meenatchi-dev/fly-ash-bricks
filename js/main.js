@@ -1,73 +1,81 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // --- 1. Sticky Navbar & Active Link Highlight ---
-  const navbar = document.querySelector('.navbar');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-    
-    // Back to top button visibility
-    const backToTop = document.querySelector('.float-back-to-top');
-    if (backToTop) {
-      if (window.scrollY > 400) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
-    }
-  };
+  // --- 1. Navbar & Mobile Menu Handlers ---
+  window.initNavbarHandlers = () => {
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-links');
+    const navOverlay = document.querySelector('.nav-overlay');
 
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Run once in case user lands mid-page
+    if (navbar) {
+      const handleScroll = () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+        
+        // Back to top button visibility
+        const backToTop = document.querySelector('.float-back-to-top');
+        if (backToTop) {
+          if (window.scrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+      };
 
-  // Highlight current page link based on filename
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  navLinks.forEach(link => {
-    const linkPath = link.getAttribute('href');
-    if (linkPath === currentPath) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  });
-
-  // --- 2. Mobile Menu Toggle ---
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navList = document.querySelector('.nav-links');
-  const navOverlay = document.querySelector('.nav-overlay');
-
-  const closeMobileMenu = () => {
-    if (menuToggle) menuToggle.classList.remove('active');
-    if (navList) navList.classList.remove('active');
-    if (navOverlay) navOverlay.classList.remove('active');
-    document.body.style.overflow = '';
-  };
-
-  if (menuToggle && navList) {
-    menuToggle.addEventListener('click', () => {
-      const isActive = menuToggle.classList.toggle('active');
-      navList.classList.toggle('active', isActive);
-      if (navOverlay) navOverlay.classList.toggle('active', isActive);
-      document.body.style.overflow = isActive ? 'hidden' : '';
-    });
-
-    if (navOverlay) {
-      navOverlay.addEventListener('click', closeMobileMenu);
+      window.removeEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', handleScroll);
+      handleScroll(); // Run once
     }
 
-    // Close mobile menu when clicking a link (excluding language dropdown)
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        if (!link.closest('.lang-selector-li')) {
-          closeMobileMenu();
+    // Highlight current page link based on filename
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    if (navLinks.length > 0) {
+      navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (linkPath === currentPath) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
         }
       });
-    });
-  }
+    }
+
+    // Mobile Menu Toggle
+    const closeMobileMenu = () => {
+      if (menuToggle) menuToggle.classList.remove('active');
+      if (navList) navList.classList.remove('active');
+      if (navOverlay) navOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    if (menuToggle && navList) {
+      // Remove old listeners by cloning node or direct assignment if needed
+      menuToggle.onclick = () => {
+        const isActive = menuToggle.classList.toggle('active');
+        navList.classList.toggle('active', isActive);
+        if (navOverlay) navOverlay.classList.toggle('active', isActive);
+        document.body.style.overflow = isActive ? 'hidden' : '';
+      };
+
+      if (navOverlay) {
+        navOverlay.onclick = closeMobileMenu;
+      }
+
+      navLinks.forEach(link => {
+        link.onclick = (e) => {
+          if (!link.closest('.lang-selector-li')) {
+            closeMobileMenu();
+          }
+        };
+      });
+    }
+  };
+
+  // Run navbar handlers on DOM load
+  window.initNavbarHandlers();
 
   // --- 3. Scroll Reveal Animations (IntersectionObserver) ---
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
