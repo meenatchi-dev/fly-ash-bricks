@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  const SUPPORTED_LANGS = ['en', 'ta', 'hi', 'te', 'kn'];
+  const SUPPORTED_LANGS = ['en', 'ta', 'hi', 'ml', 'te', 'kn'];
   const DEFAULT_LANG = 'en';
   const STORAGE_KEY = 'preferred_language';
 
@@ -49,7 +49,7 @@
     if (val === null && currentLang !== DEFAULT_LANG) {
       val = getNestedValue(enData, key);
     }
-    return val !== null ? val : key;
+    return val;
   }
 
   // Apply translations to the DOM
@@ -59,7 +59,7 @@
     elements.forEach(el => {
       const key = el.getAttribute('data-i18n');
       const translation = t(key);
-      if (translation !== key || currentLang === DEFAULT_LANG) {
+      if (translation !== null && translation !== undefined) {
         if (el.getAttribute('data-i18n-mode') === 'html') {
           el.innerHTML = translation;
         } else {

@@ -1962,39 +1962,48 @@ button, input, textarea, select {
   .menu-toggle {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 40px;
-    height: 40px;
-    padding: 10px 9px;
-    background-color: var(--primary);
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    background-color: var(--accent);
+    border: 1.5px solid var(--primary);
     border-radius: 8px;
-    border: 1px solid var(--accent);
     cursor: pointer;
     z-index: 1001;
     transition: var(--transition-fast);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   }
 
   .menu-toggle:hover {
-    background-color: var(--primary-hover);
+    background-color: var(--accent-hover);
+    transform: scale(1.05);
   }
   
   .menu-toggle span {
     display: block;
-    height: 2px;
-    width: 100%;
-    background-color: #ffffff;
+    height: 3px;
+    width: 22px;
+    background-color: var(--primary);
     border-radius: 2px;
+    flex-shrink: 0;
     transition: var(--transition-fast);
   }
   
   .menu-toggle.active {
-    background-color: var(--dark-card);
+    background-color: var(--primary);
     border-color: var(--accent);
   }
+
+  .menu-toggle.active span {
+    background-color: var(--accent);
+  }
   
-  .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-  .menu-toggle.active span:nth-child(2) { opacity: 0; }
-  .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+  .menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .menu-toggle.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
   .nav-links {
     position: fixed;
@@ -2026,10 +2035,10 @@ button, input, textarea, select {
 
   .nav-links a {
     display: block;
-    font-size: 17px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
-    padding: 14px 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent) !important; /* Bright golden color for mobile menu links */
+    padding: 14px 12px;
     width: 100%;
     transition: var(--transition-fast);
   }
@@ -2040,9 +2049,10 @@ button, input, textarea, select {
 
   .nav-links a:hover,
   .nav-links a.active {
-    color: var(--accent);
-    padding-left: 18px;
-    background-color: rgba(255, 255, 255, 0.04);
+    color: #ffffff !important;
+    padding-left: 20px;
+    background-color: rgba(200, 162, 97, 0.15);
+    border-radius: 6px;
   }
 
   .lang-selector-li {
