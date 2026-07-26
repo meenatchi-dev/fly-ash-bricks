@@ -365,19 +365,64 @@ Include:
       });
 
       if (isValid) {
-        // Trigger visual success state
-        if (successMsg) {
-          successMsg.classList.add('active');
-          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Build payload object containing form values
+        const payload = {
+          name: contactForm.querySelector('#name') ? contactForm.querySelector('#name').value.trim() : '',
+          phone: contactForm.querySelector('#phone') ? contactForm.querySelector('#phone').value.trim() : '',
+          email: contactForm.querySelector('#email') ? contactForm.querySelector('#email').value.trim() : '',
+          projectType: contactForm.querySelector('#projectType') ? contactForm.querySelector('#projectType').value : '',
+          project_type: contactForm.querySelector('#projectType') ? contactForm.querySelector('#projectType').value : '',
+          quantity: contactForm.querySelector('#quantity') ? contactForm.querySelector('#quantity').value : '',
+          message: contactForm.querySelector('#message') ? contactForm.querySelector('#message').value.trim() : ''
+        };
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Submit Quote Request';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = 'Submitting...';
         }
-        
-        // Reset form inputs
-        contactForm.reset();
-        
-        // Disable success banner after 5 seconds
-        setTimeout(() => {
-          if (successMsg) successMsg.classList.remove('active');
-        }, 8000);
+
+        // AJAX POST request to http://localhost:8080
+        fetch('http://localhost:8080', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        })
+        .then(response => {
+          if (!response.ok) {
+            console.warn('[AJAX] Server returned non-2xx status:', response.status);
+          }
+          return response.text();
+        })
+        .then(data => {
+          console.log('[AJAX Success] Posted values to http://localhost:8080:', data);
+        })
+        .catch(err => {
+          console.error('[AJAX Error] Failed to post form data to http://localhost:8080:', err);
+        })
+        .finally(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+          }
+
+          // Trigger visual success state
+          if (successMsg) {
+            successMsg.classList.add('active');
+            successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+
+          // Reset form inputs
+          contactForm.reset();
+
+          // Disable success banner after 8 seconds
+          setTimeout(() => {
+            if (successMsg) successMsg.classList.remove('active');
+          }, 8000);
+        });
       }
     });
 
