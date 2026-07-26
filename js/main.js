@@ -1,3 +1,45 @@
+  // --- Reusable AI Helper Function ---
+  window.askAI = function (service) {
+    const prompt = encodeURIComponent(`
+Tell me about Meenakshi Fly Bricks.
+
+Include:
+- Company overview
+- Products
+- Fly Bricks
+- Solid Blocks
+- Manufacturing Process
+- Quality
+- Delivery Areas
+- Contact Details
+- Why customers should choose this company
+- Compare with competitors if possible.
+`);
+
+    let url = '';
+    switch (service) {
+      case 'chatgpt':
+        url = 'https://chat.openai.com/?q=' + prompt;
+        break;
+      case 'gemini':
+        url = 'https://gemini.google.com/';
+        break;
+      case 'claude':
+        url = 'https://claude.ai/';
+        break;
+      case 'grok':
+        url = 'https://grok.com/';
+        break;
+      case 'perplexity':
+        url = 'https://www.perplexity.ai/';
+        break;
+      default:
+        url = 'https://chat.openai.com/?q=' + prompt;
+    }
+
+    window.open(url, '_blank');
+  };
+
   // --- 1. Navbar & Mobile Menu Handlers ---
   window.initNavbarHandlers = () => {
     const navbar = document.querySelector('.navbar');
