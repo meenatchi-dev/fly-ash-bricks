@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
+# AI / answer-engine crawlers — explicitly allowed so factori.com
+# can be cited in ChatGPT, Perplexity, Claude & Google AI answers
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://meenatchi-dev.github.io/fly-ash-bricks/sitemap.xml
