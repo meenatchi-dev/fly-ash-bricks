@@ -1,17 +1,78 @@
+# https://meenatchi-dev.github.io/fly-ash-bricks/
+# MEENAKSHI FLY ASH BRICKS
+
 User-agent: *
 Allow: /
 
-# AI / answer-engine crawlers — explicitly allowed so factori.com
-# can be cited in ChatGPT, Perplexity, Claude & Google AI answers
+# --- Major search engines (explicitly allowed) ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# --- AI / answer-engine crawlers (GEO/AEO citation strategy; facts in /llms.txt) ---
 User-agent: GPTBot
 Allow: /
+
 User-agent: OAI-SearchBot
 Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: ClaudeBot
 Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Amazonbot
 Allow: /
 
 Sitemap: https://meenatchi-dev.github.io/fly-ash-bricks/sitemap.xml
